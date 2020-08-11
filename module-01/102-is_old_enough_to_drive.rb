@@ -24,6 +24,15 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def is_old_enough_to_drive(age)
+  if age >= 16
+    return true
+  else
+    return false
+  end
+end
 
 # Test your method here:
+puts is_old_enough_to_drive(14)
+puts is_old_enough_to_drive(16)
+puts is_old_enough_to_drive(25)

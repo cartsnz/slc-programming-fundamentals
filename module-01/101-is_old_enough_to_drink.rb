@@ -24,7 +24,13 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def is_old_enough_to_drink(age)
+  if age >= 19
+    return true
+  else
+    return false
+  end
+end
 
 # Test your method here:
 # Pro Tip: You can print the return value of your method by calling `puts` on your method

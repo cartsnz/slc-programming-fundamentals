@@ -21,6 +21,15 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def check_age(name, age)
+  if age < 21
+    return "Go home, #{name}!"
+  else
+    return "Welcome to da club, #{name}!"
+  end
+end
 
 # Test your method here:
+puts check_age("Sally", 45)
+puts check_age("Jimmy", 22)
+puts check_age("Harry", 19)
