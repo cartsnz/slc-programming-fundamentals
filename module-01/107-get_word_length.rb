@@ -17,6 +17,17 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_word_length(word)
+  return word.length
+end
 
 # Test your method here:
+puts get_word_length("Lockdown")
+puts get_word_length("Mockingbird")
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Other ways to do this would be to use
+#  return word.size
+#  return word.count word

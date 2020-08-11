@@ -18,6 +18,17 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_full_name(first_name, last_name)
+  return "#{first_name} #{last_name}"
+end
 
 # Test your method here:
+puts get_full_name("Christian", "Cullen")
+puts get_full_name("Jonah", "Lomu")
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Other ways to do this would be to use
+#  return first_name + " " + last_name
+#  return first_name.concat(" ", last_name)
