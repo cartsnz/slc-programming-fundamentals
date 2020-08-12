@@ -18,6 +18,21 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def is_odd_length(word)
+  return word.length.even?
+end
 
 # Test your method here:
+puts is_odd_length("odd")
+puts is_odd_length("even")
+puts is_odd_length("Shopify")
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# An alternative way to do this would be:
+#  if word.length % 2 == 0 
+#   true
+#  else
+#   false
+#  end

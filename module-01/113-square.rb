@@ -17,6 +17,17 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def square(num)
+  return num * num
+end
 
 # Test your method here:
+puts square(5)
+puts square(12)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Another way to do this would be:
+#  return num ** 2
+

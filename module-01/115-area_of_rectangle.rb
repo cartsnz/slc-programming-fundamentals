@@ -18,6 +18,10 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def area_of_rectangle(length, width)
+  return length * width
+end
 
 # Test your method here:
+puts area_of_rectangle(25, 12)
+puts area_of_rectangle(8, 31)
