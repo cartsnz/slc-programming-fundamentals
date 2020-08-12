@@ -19,6 +19,28 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def greater_than_five?(num)
+  num > 5 ? true :false
+end
 
 # Test your method here:
+puts greater_than_five?(1)
+puts greater_than_five?(43)
+puts greater_than_five?(5)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# An alternative is to use a regular if statement
+#   if num > 5
+#    true
+#   else
+#    false
+#   end
+#
+# Another alternative is to use the unless statement
+#  unless num <= 5
+#   true
+#  else
+#   false
+#  end

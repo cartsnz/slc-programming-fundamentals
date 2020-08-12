@@ -19,6 +19,25 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def is_odd(num)
+  num.odd?
+end
 
 # Test your method here:
+puts is_odd(46)
+puts is_odd(83)
+puts is_odd(100)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Ruby has a helper function 'odd?' which will return true if the number is odd
+# Another way to find this is:
+#  if num % 2 != 0 
+#   true
+#  else
+#   false
+#  end
+#
+# Or flip it around to test that it is not even
+#  !num.even?

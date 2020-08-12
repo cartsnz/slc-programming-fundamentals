@@ -19,6 +19,16 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def equals_ten?(num)
+  # if num == 10 
+  #   true
+  # else
+  #   false
+  # end
+  num == 10 ? true : false
+end
 
 # Test your method here:
+puts equals_ten?(11)
+puts equals_ten?(10)
+puts equals_ten?(32)
