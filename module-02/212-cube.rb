@@ -17,6 +17,18 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def cube(num)
+  num ** 3
+end
 
 # Test your method here:
+puts cube(3)
+puts cube(5)
+puts cube(26)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+#  Alternative solutions would be:
+#   num * num * num
+#   num.pow(3)

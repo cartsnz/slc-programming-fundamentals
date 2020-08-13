@@ -18,6 +18,22 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def average_length_of_words(word1, word2)
+  (word1.length + word2.length) / 2
+end
 
 # Test your method here:
+puts average_length_of_words("pikachu", "pokemonster")
+puts average_length_of_words("ashe", "ketchum")
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+#  Calling length on a string will return an integer, and so the function will return an integer
+#   
+# To return a floating point result:
+#   (word1.length + word2.length).fdiv(2)  =>  will return 5.5 rather than 5
+# or:
+#   (word1.length.to_f + word2.length.to_f) / 2
+# or:
+#   (word1.length + word2.length) / 2.0

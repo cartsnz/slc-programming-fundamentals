@@ -36,6 +36,38 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def old_enough_to_drive?(character)
+  character["age"] >= 16 ? true : false
+end
 
 # Test your method here:
+ned = {
+  "first_name" => "Ned",
+  "last_name" => "Flanders",
+  "age" => 60
+}
+
+lisa = {
+  "first_name" => "Lisa",
+  "last_name" => "Simpson",
+  "age" => 8
+}
+
+puts old_enough_to_drive?(ned)
+puts old_enough_to_drive?(lisa)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+#  Alternative option would be to use a regular if or unless statement: 
+#   if character["age"] >= 16
+#     true
+#   else 
+#     false
+#   end
+#
+#   unless character["age"] < 16
+#     true
+#   else
+#     false
+#   end
