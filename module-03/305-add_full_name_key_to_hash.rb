@@ -25,6 +25,29 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def add_full_name_key_to_hash(person)
+ person[:full_name] = "#{person[:first_name]} #{person[:last_name]}"
+end
 
 # Test your method here:
+ceo = {
+  first_name: "Tobi",
+  last_name: "Lutke"
+}
+
+coo = {
+  first_name: "Harley",
+  last_name: "Finkelstein"
+}
+
+add_full_name_key_to_hash(ceo)
+add_full_name_key_to_hash(coo)
+
+puts ceo
+puts coo
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+#  An alternative to add a value to a key is to use store()
+#   person.store(:full_name, "#{person[:first_name]} #{person[:last_name]}")
