@@ -23,6 +23,23 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def add_to_front_of_array(value, arr)
+  arr.unshift(value)
+  # arr.insert(0, value)
+end
 
 # Test your method here:
+my_pokemon = ["pikachu", "bulbasaur"]
+add_to_front_of_array("slowpoke", my_pokemon)
+puts my_pokemon
+
+fun_numbers = [23, 7, 10, 99]
+add_to_front_of_array(100, fun_numbers)
+puts fun_numbers
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Alternative methods to add an element to the front of an array are:
+#  Use insert() to insert it at the 0 position
+#   arr.insert(0, value)

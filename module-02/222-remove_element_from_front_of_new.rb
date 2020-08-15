@@ -20,6 +20,24 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def remove_element_from_front_of_new(arr)
+  arr.shift
+  arr
+end
 
 # Test your method here:
+array1 = ["a", "b", "c", "d", "e", "f"]
+array2 = [1, 2, 3, 4, 5, 6, 7, 8]
+p remove_element_from_front_of_new(array1)
+p remove_element_from_front_of_new(array2)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Method used is to shift the first element off the array
+#
+# Alternative methods to do this would be:
+#  Use slice!() to remove the element at the given index
+#   arr.slice!(0) (and then return the array)
+#  Use delete_at() to delete the first element of the array
+#   arr.delete_at(0) (and then return the array)

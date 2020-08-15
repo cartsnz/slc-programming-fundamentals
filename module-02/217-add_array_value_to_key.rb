@@ -28,6 +28,26 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def add_array_value_to_key(obj, arr, key)
+  obj[key] = arr
+  # obj.store(key, arr)
+end
 
 # Test your method here:
+my_hash = {
+  fav_colour: "green",
+  fav_number: 7
+}
+
+my_array = ["apple", "pizza", "cookies"]
+
+add_array_value_to_key(my_hash, my_array, :fav_food)
+
+puts my_hash.fetch(:fav_food)
+puts my_hash
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+#  An alternative to add a value to a key is to use store 
+#   obj.store(key, arr)
