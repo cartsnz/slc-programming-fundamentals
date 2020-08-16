@@ -31,6 +31,30 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def count_char_in_string(word, char)
+  array_of_chars = word.chars
+  array_of_chars.select {|c| c == char || c == char.upcase }.length
+end
 
 # Test your method here:
+word = "Hasta la vista baby"
+puts count_char_in_string(word, "a")
+
+other_word = "Elsa is nominated as Everyone's favourite princess"
+puts count_char_in_string(other_word, "e")
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used is to use the chars() method on the string to return the all of the characters as an array
+#  The select() method is then used on the array to select all of the characters that equal the char passed in
+#  The length() method is then chained on the end to get the length
+#
+# Alternative methods to do this would be:
+#  Use each_char to return an enumerator of the chars, and then chain to_a onto it to convert it to an array
+#   word.each_char.to_a (this is the long-form version of chars)
+#  Use the split() method to split the string into an array
+#   word.split(//)
+#
+#  On the array, the filter() method could be used (which is an alias for select)
+#   array_of_chars.filter {|c| c == char || c == char.upcase }.length

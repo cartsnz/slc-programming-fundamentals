@@ -30,6 +30,23 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def remove_element_from_back(arr)
+  arr.pop
+end
 
 # Test your method here:
+array1 = ["a", "b", "c", "d", "e", "f"]
+array2 = [1, 2, 3, 4, 5, 6, 7, 8]
+
+remove_element_from_back(array1)
+p array1
+
+remove_element_from_back(array2)
+p array2
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Alternative methods to do this would be:
+#  Use the slice!() method to slice off the last element (and remove it permanently)
+#   arr.slice!(-1)
