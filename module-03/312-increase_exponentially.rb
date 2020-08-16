@@ -18,6 +18,11 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def increase_exponentially(num, exp)
+  num ** exp
+end
 
 # Test your method here:
+puts increase_exponentially(6, 2)
+puts increase_exponentially(11, 4)
+puts increase_exponentially(7, 5)
