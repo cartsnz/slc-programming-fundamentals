@@ -33,6 +33,18 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def are_valid_credentials(username, password)
+  username.length > 4 && password.length >= 8 ? true : false
+end
 
 # Test your method here:
+username1 = "kewlkid16"
+password1 = "pword"
+
+username2 = "momo"
+password2 = "supersecurepassword123"
+
+puts are_valid_credentials(username1, password1)
+puts are_valid_credentials(username2, password2)
+puts are_valid_credentials(username2, password1)
+puts are_valid_credentials(username1, password2)
