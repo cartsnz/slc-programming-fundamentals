@@ -36,6 +36,29 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
+def count_words_in_string(sentence)
+  hash = {}
+  count = 0
+
+  words = sentence.downcase.split(' ')
+  words.each do |word|
+    if hash.has_key?(word)
+      count += 1
+      hash[word] = count
+    else
+      hash[word] = 1
+    end
+  end
+
+  hash
+end
 
 
 # Test your method here:
+string = "The cat in the hat didn't eat the cat with the rat"
+string2 = "Beau is my beau she is the most beautiful beau"
+string3 = "The quick brown fox jumped over the lazy dog but the dog jumped up"
+
+p count_words_in_string(string)
+p count_words_in_string(string2)
+p count_words_in_string(string3)
