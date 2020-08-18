@@ -18,6 +18,11 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_shortest_word(word1, word2, word3)
+  words = [word1, word2, word3]
+  words.each do |word|
+   
+  end
+end
 
 # Test your method here:

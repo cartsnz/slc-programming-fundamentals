@@ -25,6 +25,25 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def add_to_back_of_new_array(arr, element)
+  arr.push(element)
+end
 
 # Test your method here:
+friends = ["dana", "beau", "jack"]
+lucky_num = [7, 10, 2, 50]
+
+p add_to_back_of_new_array(friends, "taylor")
+p add_to_back_of_new_array(lucky_num, 88)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# An alternative is to use insert() to insert the element at the end
+#   - arr.insert(-1, element)
+#
+# Another alternative is to use << which inserts the element at the end
+#   - arr << element
+#
+# Can also use append() - which is an alias for push
+#   - arr.append(element)

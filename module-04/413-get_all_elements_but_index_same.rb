@@ -32,6 +32,29 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_all_elements_but_index(arr, index)
+  arr.each_index do |i|
+    if i == index
+      arr.delete_at(i)
+    end
+  end
+end
 
 # Test your method here:
+friends = ["dana", "beau", "jack", "tayles"]
+lucky_num = [7, 10, 2, 50, 88]
+
+p get_all_elements_but_index(friends, 1)
+p get_all_elements_but_index(lucky_num, 3)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used is to loop through all the items using each_index() and then when
+# the index is equal use the delete_at() method to remove that item
+#  
+# An alternative is to use delete_at() outside of a loop
+#  - But this returns just the deleted item, so we would then need to return the arr
+#     arr.delete_at(index)
+#     return arr
+#

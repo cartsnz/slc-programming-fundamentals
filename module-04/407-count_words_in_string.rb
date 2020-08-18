@@ -38,15 +38,13 @@
 # Create your method here:
 def count_words_in_string(sentence)
   hash = {}
-  count = 0
 
   words = sentence.downcase.split(' ')
   words.each do |word|
-    if hash.has_key?(word)
-      count += 1
-      hash[word] = count
-    else
+    if !hash.has_key?(word)
       hash[word] = 1
+    else
+      hash[word] += 1
     end
   end
 
@@ -62,3 +60,16 @@ string3 = "The quick brown fox jumped over the lazy dog but the dog jumped up"
 p count_words_in_string(string)
 p count_words_in_string(string2)
 p count_words_in_string(string3)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# Method used is to use to first declare an empty hash and then loop through all of 
+# the words and increment the value by 1 each time
+#  
+# To get an array of the all the words we first use the downcase() method to make them
+# all lower case and then use split(' ') to split them using the space as a delimiter
+# 
+# We then loop through the array and if the key doesn't yet exist then we create it and
+# give it a value of 1
+# If the key does exist then we increment the value by 1 each time 
