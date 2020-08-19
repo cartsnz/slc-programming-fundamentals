@@ -44,6 +44,40 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def copy_elements_in_hash(hash, arr)
+  hash.select do |k,v|
+    arr.include?(k)
+  end
+end
 
 # Test your method here:
+daycare = {
+  "age" => [5, 7],
+  "address" => "80 Spadina Ave",
+  "cost_per_hour" => 35,
+  "name" => "Cool Daycare Place"
+}
+
+film = {
+  "title" => "The Lorax",
+  "rating" => [9, 10, 10, 8],
+  "duration" => 120,
+  "awards" => ["Oscars", "Kid's Choice"]
+}
+
+puts copy_elements_in_hash(daycare, ["age", "cost_per_hour", "children"])
+puts copy_elements_in_hash(film, ["duration", "director", "title", "rating"])
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used is to the select() method on the hash to select the elements we need
+#  - Inside the select block, we look to see if the array includes the key of the hash
+#
+# Lessons from this module:
+# The 'select' block (and others such as delete_if) can be written in long form:
+#      hash.select do |k,v|
+#       arr.include?(k)
+#      end
+# rather than just as:
+#      hash.select {|k,v|...}
