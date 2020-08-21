@@ -32,6 +32,22 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def filter_even_length_words(arr)
+  arr.select do |v|
+    v.length.even?
+  end
+end
 
 # Test your method here:
+friends = ["kay", "lisa", "taylor", "sabrina", "patrick"]
+brands = ["puma", "nike", "adidas", "reebok", "oakley", "vans", "underarmour"]
+weaknesses = []
+
+p filter_even_length_words(friends)
+p filter_even_length_words(brands)
+p filter_even_length_words(weaknesses)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used is to select all elements of the array where the length of the value is even

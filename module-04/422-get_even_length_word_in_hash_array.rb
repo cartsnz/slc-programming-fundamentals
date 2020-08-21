@@ -48,6 +48,35 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_even_length_words_in_hash_array(hash, key)
+  obj = hash[key.to_sym]
+  if obj.is_a? (Array)
+    obj.select do |v|
+      v.length.even?
+    end
+  else
+    []
+  end
+end
 
 # Test your method here:
+game = {
+  title: "Super Mario Bros",
+  lives: 3,
+  level_types: ["overworld", "underwater", "castle", "athletic"],
+  completed_levels: []
+}
+
+pokemon = {
+  name: "Charmander",
+  number: 4,
+  type: "fire",
+  weaknesses: ["water", "ground", "rock"]
+}
+
+p get_even_length_words_in_hash_array(game, "level_types")
+p get_even_length_words_in_hash_array(game, "completed_levels")
+p get_even_length_words_in_hash_array(game, "enemies")
+p get_even_length_words_in_hash_array(pokemon, "weaknesses")
+p get_even_length_words_in_hash_array(pokemon, "name")
+
