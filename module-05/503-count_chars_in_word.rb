@@ -65,5 +65,3 @@ p count_chars_in_word(word2)
 # If it doesn't exist, assign the value for that key to be 1
 # And then we return the hash
 #
-# Alternative methods:
-#   arr.delete_at(-1) to delete the last element
