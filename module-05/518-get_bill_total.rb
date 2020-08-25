@@ -24,6 +24,19 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_bill_total(subtotal)
+  # tip = subtotal * 0.18
+  # total = tip + subtotal
+  # tax = subtotal * 0.13
+  # total = subtotal + tip + tax
+  subtotal + (subtotal * 0.18) + (subtotal * 0.13)
+end
 
 # Test your method here:
+p get_bill_total(52)
+p get_bill_total(83)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used here is to just add the tip and tax amount to the subtotal
