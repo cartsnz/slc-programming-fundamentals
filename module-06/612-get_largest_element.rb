@@ -36,6 +36,38 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_largest_element(arr)
+  largest_num = arr[0] || 0
+  arr.each do |num|
+    if num > largest_num
+      largest_num = num
+    end
+  end
+  largest_num
+end
 
 # Test your method here:
+scores = [100, 84, 91, 85, 91, 78]
+ages = [15, 12, 12, 14, 11, 12]
+lucky_num = [7, 7, 7]
+tens = [10, 10, 10, 10]
+nothing = []
+
+p get_largest_element(scores)
+p get_largest_element(ages)
+p get_largest_element(lucky_num)
+p get_largest_element(tens)
+p get_largest_element(nothing)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used here is to first create a local variable to hold the largest number
+# We assign that variable to be equal to the first number in the array or 0 if it is nil
+# Then loop through the array and check if the number is larger than the largest number variable
+# If it is then re-assign the largest number to this number
+# Return the largest_number variable at the end
+#
+# Alternative method is to sort the array and then return the largest number
+#  sorted_array = arr.sort {|a,b| a <=> b}
+#  sorted_array.last || 0
