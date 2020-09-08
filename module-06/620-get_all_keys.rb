@@ -50,6 +50,42 @@
 # Sandbox
 # ==============================================================================
 # Create your method here:
-
+def get_all_keys(hash)
+  arr = []
+  hash.each do |k,v|
+    arr << k.to_s
+  end
+  arr
+end
 
 # Test your method here:
+game = {
+  title: "Super Mario Bros",
+  lives: 3,
+  level_types: ["overworld", "underwater", "castle", "athletic"],
+  completed_levels: [1, 2, 6],
+  undefeated_enemies: []
+}
+
+pokemon = {
+  name: "Charmander",
+  type: "fire",
+  weaknesses: ["water", "ground", "rock"]
+}
+
+empty_hash = {}
+
+p get_all_keys(game)
+p get_all_keys(pokemon)
+p get_all_keys(empty_hash)
+
+# ==============================================================================
+# Notes
+# ==============================================================================
+# The method used here is to first create an empty array
+# Then we loop through the hash and at each index we push the key onto the array
+# Because the keys are symbols, we need to use the to_s method to convert them to strings
+# Return the array at the end
+# 
+# An alternative method is to use the built-in keys method
+#  hash.keys
